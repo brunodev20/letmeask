@@ -1,5 +1,5 @@
 .room-code {
-  height: 40px;
+  height: 39px;
   border-radius: 8px;
   overflow: hidden;
   
@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
   }
 
   span {

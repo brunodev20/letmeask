@@ -19,7 +19,7 @@ export function NewRoom() {
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();                             // impede o código de recarregar a página quando não há input no formulário
 
-    if (newRoom.trim()=== '') {
+    if (newRoom.trim() === '') {
       return;
     }
 
@@ -31,7 +31,7 @@ export function NewRoom() {
     })
 
 
-    history.push(`/rooms/${firebaseRoom.key}`)          // redireciona o usuário para a sala criada a partir de sua chave
+    history.push(`/admin/rooms/${firebaseRoom.key}`)          // redireciona o usuário para a sala criada a partir de sua chave
   }
 
   return (
