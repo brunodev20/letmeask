@@ -42,6 +42,10 @@ These are the technologies that were used during the development of this project
     -> Run the project
     $ yarn start
 
+#### Or
+
+* The project is currently running at [this](https://letmeask-604e8.web.app) link. Go check it out!
+
 <hr>
     
 <p align="center">Made by Bruno Carnavalli 🎮💻</p>
