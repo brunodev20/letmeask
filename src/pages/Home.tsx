@@ -10,8 +10,6 @@ import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 
-import { useDark } from '../hooks/useTheme';
-
 import '../styles/auth.scss';
 // quando se usa imagens no React elas são sempre importadas assim 👆 e nunca com o caminho (path) no código src
 
@@ -19,8 +17,6 @@ import '../styles/auth.scss';
 export function Home() {
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth();
-
-  const { darkMode, setDarkMode } = useDark();
 
   const [ roomCode, setRoomCode ] = useState('');
   
@@ -39,7 +35,7 @@ export function Home() {
       return;
     }
 
-    const roomRef = await database.ref(`rooms/${roomCode}`).get()
+    const roomRef = await database.ref(`/rooms/${roomCode}`).get()
 
     if (!roomRef.exists()) {
       alert ('Room does not exist.')
@@ -62,7 +58,7 @@ export function Home() {
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
       </aside>
       <main>
-        <div className="main-content">
+        <div className="main-content">              
           <img src={logoImg} alt="Letmeask" />
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo do Google" />

@@ -72,7 +72,7 @@ export function Room () {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <img onClick={() => (history.push(`/`))} src={logoImg} alt="Letmeask" />
           <RoomCode code={params.id}/>
         </div>
       </header>
